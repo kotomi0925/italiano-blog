@@ -1,3 +1,5 @@
+require('dotenv').config();
+const { API_KEY } = process.env;
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -39,6 +41,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/dotenv',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -47,5 +50,8 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
+  },
+  env: {
+    API_KEY
   }
 }

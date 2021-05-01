@@ -18,7 +18,7 @@ export default {
       'https://leone-9.microcms.io/api/v1/about',
       {
         // your-api-key部分は自分のapi-keyに置き換えてください
-        headers: { 'X-API-KEY': '5d033a57-ceb0-42fc-8949-ecaf6da6cbb0' }
+        headers: { 'X-API-KEY':process.env.API_KEY }
       }
     )
     return {
